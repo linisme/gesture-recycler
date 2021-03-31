@@ -395,7 +395,7 @@ abstract class GestureAdapter<T, K : GestureViewHolder<T>> : RecyclerView.Adapte
      * @param toPosition view end position
      * @return returns true if transition is successful
      */
-    internal fun onItemMove(fromPosition: Int, toPosition: Int): Boolean {
+    open fun onItemMove(fromPosition: Int, toPosition: Int): Boolean {
         val viewType = getItemViewType(toPosition)
         if (viewType == TYPE_HEADER_ITEM || viewType == TYPE_FOOTER_ITEM) {
             return false
